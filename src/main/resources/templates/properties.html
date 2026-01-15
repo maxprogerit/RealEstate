@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Properties - Real Estate Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🏠 Real Estate Marketplace</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties" class="active">Properties</a></li>
+                <li><a href="/map">Map View</a></li>
+                <li><a href="/add-property">Add Property</a></li>
+                <li><a href="/saved">Saved</a></li>
+                <li><a href="/alerts">Alerts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h2>Browse Properties</h2>
+                <p>Find your perfect home from our extensive listings</p>
+            </div>
+
+            <div class="filters-container">
+                <h3 style="margin-bottom: 1rem;">Filter Properties</h3>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>Min Price</label>
+                        <input type="number" id="minPrice" placeholder="Min Price">
+                    </div>
+                    <div class="filter-group">
+                        <label>Max Price</label>
+                        <input type="number" id="maxPrice" placeholder="Max Price">
+                    </div>
+                    <div class="filter-group">
+                        <label>Min Bedrooms</label>
+                        <input type="number" id="minBedrooms" placeholder="Min Bedrooms">
+                    </div>
+                    <div class="filter-group">
+                        <label>Max Bedrooms</label>
+                        <input type="number" id="maxBedrooms" placeholder="Max Bedrooms">
+                    </div>
+                    <div class="filter-group">
+                        <label>Min Bathrooms</label>
+                        <input type="number" id="minBathrooms" placeholder="Min Bathrooms">
+                    </div>
+                    <div class="filter-group">
+                        <label>City</label>
+                        <input type="text" id="city" placeholder="Enter city">
+                    </div>
+                    <div class="filter-group">
+                        <label>State</label>
+                        <input type="text" id="state" placeholder="Enter state">
+                    </div>
+                    <div class="filter-group">
+                        <label>Property Type</label>
+                        <select id="propertyType">
+                            <option value="">All Types</option>
+                            <option value="HOUSE">House</option>
+                            <option value="APARTMENT">Apartment</option>
+                            <option value="CONDO">Condo</option>
+                            <option value="TOWNHOUSE">Townhouse</option>
+                            <option value="VILLA">Villa</option>
+                            <option value="LAND">Land</option>
+                            <option value="COMMERCIAL">Commercial</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select id="status">
+                            <option value="">All Status</option>
+                            <option value="FOR_SALE">For Sale</option>
+                            <option value="FOR_RENT">For Rent</option>
+                            <option value="SOLD">Sold</option>
+                            <option value="RENTED">Rented</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+                    <button class="btn btn-secondary" onclick="clearFilters()">Clear Filters</button>
+                </div>
+            </div>
+
+            <div id="propertiesContainer" class="properties-grid">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Real Estate Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/properties.js"></script>
+</body>
+</html>
